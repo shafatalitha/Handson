@@ -1,11 +1,13 @@
 
 import './App.css';
-import Search from './pages/Search'
+import Search from './pages/Search';
+import {Provider} from 'react-redux';
+import Store from './Store'
 function App() {
   return (
-    <div className="App">
-      <Search/>
-    </div>
+    <Provider store={Store}>
+      <Search />
+    </Provider>
   );
 }
 
