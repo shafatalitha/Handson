@@ -8,3 +8,5 @@ const SearchBar = ({ query, onChange, onSubmit }) => {
   };
   
   export default SearchBar;
+
+  

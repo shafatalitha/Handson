@@ -28,7 +28,7 @@ const Home = () => {
     const response = await fetch(url)
       .then((res) => res.json())
       .catch((e) => console.log(e));
-      console.log(response.data);
+    console.log(response.data);
     setResults(response.data);
   };
 
