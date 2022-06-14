@@ -15,6 +15,7 @@ const Navbar = () => {
           <Link to="/trending">Trending</Link>
         </li>
       </ul>
+      <img src='https://res.cloudinary.com/djw882kt3/image/upload/v1655246007/Media/FRD_5039_u2n9lf.jpg'/>
 
     </div>
   );

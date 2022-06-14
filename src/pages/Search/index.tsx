@@ -1,22 +1,22 @@
-import { useState } from "react";
+import { ChangeEventHandler, useState } from "react";
 import SearchBar from "../../components/searchbar";
 import Gif from "../../components/gif";
 import { setQuery } from "../../Store/queryAction";
 import { useSelector, useDispatch } from "react-redux";
+import { TRootState } from "../../Store";
 
 const Home = () => {
   const GIPHY_KEY = process.env.REACT_APP_GIPHY_KEY;
-  const currentQuery = useSelector((state) => state.query.value);
+  const currentQuery:string = useSelector((state:TRootState) => state.query.value);
   const dispatch = useDispatch();
-  // const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit: ChangeEventHandler<HTMLInputElement> = (e) => {
     e.preventDefault();
     getData();
   };
 
-  const handleChange = (e) => {
+  const handleChange:  ChangeEventHandler<HTMLInputElement>= (e) => {
     dispatch(setQuery(e.target.value));
   };
 
@@ -40,7 +40,7 @@ const Home = () => {
         onSubmit={handleSubmit}
       />
       <br />
-      {results.map((it) => (
+      {results.map((it:any) => (
         <Gif key={it.id} source={it.images.downsized.url} title={it.title} />
       ))}
     </>
