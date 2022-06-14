@@ -10,6 +10,7 @@ function App() {
     <Provider store={Store}>
       <Router>
       <Navbar/>
+      <img src="https://res.cloudinary.com/djw882kt3/image/upload/v1655246007/Media/FRD_5039_u2n9lf.jpg"/>
         <Switch>
           <Route path="/trending" component={Trending} />
           <Route path="/search" component={Search} />
